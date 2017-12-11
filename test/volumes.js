@@ -116,6 +116,22 @@ tests['Tbs to Tbs'] = function () {
   assert.strictEqual( convert(140).from('Tbs').to('Tbs') , 140);
 };
 
+tests['tad to Tbs'] = function () {
+  assert.strictEqual( convert(12).from('tad').to('Tbs') , 1);
+};
+
+tests['dash to tad'] = function () {
+  assert.strictEqual( convert(4).from('dash').to('tad') , 2);
+};
+
+tests['pinch to Tbs'] = function () {
+  assert.strictEqual( convert(96).from('pinch').to('Tbs') , 2);
+};
+
+tests['smidgen to Tbs'] = function () {
+  assert.strictEqual( convert(96).from('smidgen').to('Tbs') , 1);
+};
+
 // When converting between systems, expect < 0.1% error
 tests['tsp to l'] = function () {
   var expected = 1.75
